@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+demografia_responsable,demografia responsable,model_myanimelist_demografia,myanimelist_manager,1,1,1,1
+anime_responsable,anime responsable,model_myanimelist_anime,myanimelist_manager,1,1,1,1
+mangashop_responsable,mangashop responsable,model_myanimelist_mangashop,myanimelist_manager,1,1,1,1

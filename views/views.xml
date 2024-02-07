@@ -1,0 +1,173 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="myanimelist.demografia_tree">
+      <field name="name">myanimelist.demografia.tree</field>
+      <field name="model">myanimelist.demografia</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="myanimelist.demografia_form">
+      <field name="name">myanimelist.demografia.tree</field>
+      <field name="model">myanimelist.demografia</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="name"/>
+            <field name="descripcion"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="myanimelist.anime_tree">
+      <field name="name">myanimelist.anime.tree</field>
+      <field name="model">myanimelist.anime</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="synopsis"/>
+          <field name="chapters"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="myanimelist.anime_form">
+      <field name="name">myanimelist.anime.form</field>
+      <field name="model">myanimelist.anime</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="name"/>
+            <field name="synopsis"/>
+            <field name="chapters"/>
+            <field name="score"/>
+            <field name="status"/>
+            <field name="release_date"/>
+            <field name="started_watching"/>
+            <field name="finished_watching"/>
+            <field name="mean_score"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="myanimelist.mangashop_tree">
+      <field name="name">myanimelist.mangashop.tree</field>
+      <field name="model">myanimelist.mangashop</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="chapters"/>
+          <field name="unit_price"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="myanimelist.mangashop_form">
+      <field name="name">myanimelist.mangashop.form</field>
+      <field name="model">myanimelist.mangashop</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="name"/>
+            <field name="chapters"/>
+            <field name="unit_price"/>
+            <field name="author"/>
+            <field name="synopsis"/>
+            <field name="volumes"/>
+            <field name="units"/>
+            <field name="amount"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="myanimelist.demografia_action_window">
+      <field name="name">myanimelist.demografia_action_window</field>
+      <field name="res_model">myanimelist.demografia</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="myanimelist.anime_action_window">
+      <field name="name">myanimelist.anime_action_window</field>
+      <field name="res_model">myanimelist.anime</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="myanimelist.mangashop_action_window">
+      <field name="name">myanimelist.mangashop_action_window</field>
+      <field name="res_model">myanimelist.mangashop</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="MYANIMELIST" id="myanimelist.menu_root" groups="myanimelist_manager"/>
+
+    <menuitem name="Demografía" id="myanimelist.demografia_menu" parent="myanimelist.menu_root" groups="myanimelist_manager" action="myanimelist.demografia_action_window"/>
+    <menuitem name="Listado de animes" id="myanimelist.anime_menu" parent="myanimelist.menu_root" groups="myanimelist_manager" action="myanimelist.anime_action_window"/>
+    <menuitem name="Tienda de mangas" id="myanimelist.mangashop_menu" parent="myanimelist.menu_root" groups="myanimelist_manager" action="myanimelist.mangashop_action_window" />
+    
+    
+      
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="myanimelist.list">
+      <field name="name">myanimelist list</field>
+      <field name="model">myanimelist.myanimelist</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="myanimelist.action_window">
+      <field name="name">myanimelist window</field>
+      <field name="res_model">myanimelist.myanimelist</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="myanimelist.action_server">
+      <field name="name">myanimelist server</field>
+      <field name="model_id" ref="model_myanimelist_myanimelist"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="myanimelist" id="myanimelist.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="myanimelist.menu_1" parent="myanimelist.menu_root"/>
+    <menuitem name="Menu 2" id="myanimelist.menu_2" parent="myanimelist.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="myanimelist.menu_1_list" parent="myanimelist.menu_1"
+              action="myanimelist.action_window"/>
+    <menuitem name="Server to list" id="myanimelist" parent="myanimelist.menu_2"
+              action="myanimelist.action_server"/>
+-->
+  </data>
+</odoo>
