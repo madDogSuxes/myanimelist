@@ -6,7 +6,12 @@
         Modulo de Odoo para registrar los animes/mangas que ves
     """,
 
+    'sequence': 10,
     'installable': True,
+    'application':True,
+    'auto_install': False,
+    'license':'LGPL-3',
+    'website': '',
 
     'description': """
         Este módulo está inspiradado en la página homónima, además de
@@ -16,25 +21,23 @@
     """,
 
     'author': "Jesús Lorca López",
-    'website': "https://www.yourcompany.com",
+    'website': "",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','web'],
+    'depends': [],
+    'qweb': [],
 
     # always loaded
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
-        'reports/report_anime.xml',
-        'reports/report_mangashop.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

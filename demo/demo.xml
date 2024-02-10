@@ -1,30 +1,26 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="myanimelist.myanimelist">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+      <record id="objetct1" model="myanimelist.anime">
+        <field name="name">One piece</field>
+        <field name="synopsis">La historia de un joven que sale al mar en busca de convertirse en el rey de los piratas</field>
+        <field name="score">8</field>
+        <field name="status">2</field>
+        <field name="chapters">1089</field>
+        <field name="release_date">1999-10-20</field>
+        <field name="started_watching">2005-05-01</field>
+        <field name="finished_watching">2024-05-17</field>
+      </record>
 
-          <record id="object1" model="myanimelist.myanimelist">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+      <record id="objetct1" model="myanimelist.anime">
+        <field name="name">Naruto</field>
+        <field name="synopsis">La historia del ninja rubio que su sueño es convertirse en el próximo hokage</field>
+        <field name="score">7</field>
+        <field name="status">2</field>
+        <field name="chapters">220</field>
+        <field name="release_date">2002-02-08</field>
+        <field name="started_watching">2005-05-01</field>
+        <field name="finished_watching">2010-03-23</field>
+      </record>
 
-          <record id="object2" model="myanimelist.myanimelist">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="myanimelist.myanimelist">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="myanimelist.myanimelist">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
     </data>
 </odoo>

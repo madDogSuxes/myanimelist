@@ -22,6 +22,8 @@ class myanimelist_anime(models.Model):
     release_date=fields.Char(string="Fecha de estreno")
     started_watching=fields.Date(string="Fecha en la que empezó a verlo")
     finished_watching=fields.Date(string="Fecha en la que terminó de verlo")
+    demografia=fields.Many2one("myanimelist.demografia",string="Demografia")
+    image=fields.Binary()
 
     mean_score=fields.Float(string="Media de puntuación", compute="_calculated_mean_score", store=True)
 
@@ -44,9 +46,11 @@ class myanimelist_mangaShop(models.Model):
     synopsis=fields.Char(string="Una breve sinopsis del manga")
     chapters=fields.Integer(string="Capítulos")
     volumes=fields.Integer(string="Volúmenes de la obra")
-    unit_price=fields.Integer()
+    unit_price=fields.Float()
     units=fields.Integer()
     amount=fields.Float(compute="_calculateAmount",store=True)
+    demografia=fields.Many2one("myanimelist.demografia",string="Demografia")
+    image=fields.Binary()
 
     @api.depends('unit_price', 'units')
     def _calculateAmount(self):

@@ -1,9 +1,15 @@
 <odoo>
     <data>
-        <reccord id="myanimelist_manager" model="res.groups">
+        <record id="myanimelist_manager" model="res.groups">
             
             <field name="name">MYANIMELIST / Responsable</field>
 
-        </reccord>
+        </record>
+
+        <record id="myanimelist_user" model="res.groups">
+            
+            <field name="name">MYANIMELIST / Usuario</field>
+
+        </record>
     </data>
 </odoo>
